@@ -16,6 +16,13 @@ export async function evaluateDomain(prompt) {
         or
         OUT_OF_DOMAIN
 
+        Use FinAssist's defined scope only for classification.
+        Do not classify based on the request is safe, authorised, realistic or possible.
+        Do not use general banking knowledge to expand the supported scope.
+        Understand the user's likely intent despite slang, bad grammar, typos, or indirect wording.
+        A request can still be IN_DOMAIN even if it is unsafe, unauthorized, impossible, invalid, or something the system should refuse.
+        Classify only the user's underlying topic/intent against FinAssist's defined scope.
+
         Return only the classification.
 
         User prompt:
